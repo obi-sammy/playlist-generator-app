@@ -107,6 +107,13 @@ Project Structure
 -   **Backend:** Django REST Framework setup in the `backend` directory with REST APIs for genre-based playlist generation.
    
 
+## Postman Documentation
+
+To explore the API endpoints for the Playlist Generator App, visit the detailed [Postman Documentation](https://documenter.getpostman.com/view/21537862/2sAYBbf9ef). 
+
+The documentation includes:
+- **Endpoint Descriptions:** Detailed information about each endpoint, including request methods, parameters, and response structures.
+
 ## Usage
 
 ### Local Usage
