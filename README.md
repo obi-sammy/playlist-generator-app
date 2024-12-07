@@ -12,6 +12,17 @@ The Playlist Generator App is a web application that allows users to generate AI
 - **User Feedback:** Informative UI elements to guide users, including warnings about losing the playlist after navigating away.
 - **Interactive Design:** Fully responsive with a modern aesthetic.
 
+## Screenshots
+
+### 1. Genre Selection
+![Genre Selection](https://github.com/user-attachments/assets/e613adce-3453-4e2c-b975-efd0196f3818)
+
+### 2. Generating State
+![Generating State](https://github.com/user-attachments/assets/0ebdef50-229c-49eb-81ba-0a03798674f0)
+
+### 3. Generated Playlist
+![Generated Playlist](https://github.com/user-attachments/assets/0b1a6d36-02d0-4f49-96c7-5cf72689bc27)
+
 ## Technologies Used
 
 - **Front-end:** React.js, CSS
@@ -96,19 +107,28 @@ Project Structure
 -   **Backend:** Django REST Framework setup in the `backend` directory with REST APIs for genre-based playlist generation.
    
 
-Usage
------
+## Usage
 
-1.  Launch the application using the above installation instructions.
-2.  Select a music genre from the dropdown menu.
-3.  Generate your playlist and explore recommended tracks.
-4.  Use the back button to navigate back, clearing the playlist.
+### Local Usage
+
+1. Follow the installation instructions to set up the application locally.
+2. Select a music genre from the dropdown menu on the interface.
+3. Click "Generate Playlist" to create a curated list of songs based on your chosen genre.
+4. Use the "Back" button to clear the playlist and select a new genre.
+
+### Hosted Usage
+
+1. The front-end of the application is hosted and accessible [playlist-generator-app link](https://playlist-generator-njjvpdik7-obi-sammys-projects.vercel.app/).  
+2. Unfortunately, the server is not yet hosted, meaning requests to generate playlists are not functional from the hosted site at this time.    
+Note: The web-based option is currently under development and will be available soon.
 
 ## Areas of Improvement
 
 - [ ] Implement user authentication for personalized playlists.
 - [ ] Change the dropdown to a form where users can specify niche genres.
 - [ ] Add persistent storage for playlist saving and sharing.
+- [ ] Restrict access to the server by adding the address of the urls that should have access to the server in the corsheader function.
+- [ ] Host the server
 
 ## Support
 

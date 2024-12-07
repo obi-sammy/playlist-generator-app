@@ -21,12 +21,12 @@ const PlaylistApp = () => {
     try {
       const response = await axios.get('http://127.0.0.1:8000/api/playlist',{
         params: {
-          genre: genre,
-          headers: { "Content-Type": "application/json" }
+          genre: genre
         },
+        headers: { 
+          "Content-Type": "application/json" 
+        }
       });
-
-      console.log(response.data.playlist)
 
       const parsedData = JSON.parse(response.data.playlist);
 
@@ -39,9 +39,14 @@ const PlaylistApp = () => {
         setStatus('');
       }
     } catch (err) {
-      console.log(err)
-      setErrorMessage('An error occurred while fetching the playlist.');
-      setStatus('')
+      if (err.response) {
+        setErrorMessage('An error occurred while fetching the playlist.');
+      } else if (err.request) {
+        setErrorMessage('Network error, please try again later.');
+      } else {
+        setErrorMessage('An unexpected error occurred.');
+      }
+      setStatus('');
     };
   }; 
 
@@ -100,6 +105,7 @@ const PlaylistApp = () => {
               onClick={() => {
                 setStatus('');
                 setPlaylist([]);
+                setGenre('');
               }}
             >
               <FaArrowLeft className='back-button-icon'/>
@@ -129,8 +135,6 @@ const PlaylistApp = () => {
           </section>
         }
       </main>
-
-      <footer></footer>
     </div>
   );
 };
