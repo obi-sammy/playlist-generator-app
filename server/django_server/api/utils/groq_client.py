@@ -11,7 +11,14 @@ def generate_playlist_from_groq(genre):
             messages=[
                 {
                     "role": "user",
-                    "content": f"Generate a list of 5 {genre} songs in JSON format with only the title and artist  in an object, without any additional text, '\', '\n' or code block.",
+                    "content": f"""
+                    Generate a list of exactly 5 {genre} songs in valid JSON format. 
+                    The response should explicitly follow this structure, it should be a single valid JSON array starting with `[` and ending with `]` and have no additional text
+                    [
+                    {{"title": "Song Title 1", "artist": "Artist Name 1"}},
+                    {{"title": "Song Title 2", "artist": "Artist Name 2"}}
+                    ]
+                    """,
                 }
             ],
             model="llama3-8b-8192",

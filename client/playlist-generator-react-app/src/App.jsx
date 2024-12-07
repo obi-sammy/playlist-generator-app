@@ -28,7 +28,10 @@ const PlaylistApp = () => {
         }
       });
 
-      const parsedData = JSON.parse(response.data.playlist);
+      const parsedData =
+      typeof response.data.playlist === 'string'
+        ? JSON.parse(response.data.playlist)
+        : response.data.playlist;
 
       if (Array.isArray(parsedData)) {
         setPlaylist(parsedData);
