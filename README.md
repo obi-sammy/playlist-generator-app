@@ -1,7 +1,3 @@
-# Obi Samuel
-
-Technical Assessment
-
 # Playlist Generator App
 
 The Playlist Generator App is a web application that allows users to generate AI-curated playlists based on their favorite genres. The app features an intuitive interface for selecting music genres and displays personalized song recommendations.
@@ -29,6 +25,57 @@ The Playlist Generator App is a web application that allows users to generate AI
 - **Back-end:** Django REST Framework
 - **Text Generation API:** Groq
 - **Deployment:** Gitlab
+
+Project Structure
+-----------------
+
+```
+playlist-generator-app/
+   ├── client/
+   │   ├── playlist-generator-react-app/
+   │   │   ├── src/
+   │   │   │   ├── assets/
+   │   │   │   ├── App.css
+   │   │   │   ├── App.jsx
+   │   │   │   ├── index.css
+   │   │   │   └── main.jsx
+   │   │   ├── public/
+   │   │   ├── index.html
+   │   │   ├── .gitignore
+   │   │   ├── eslint.config.js
+   │   │   ├── package-lock.json
+   │   │   ├── package.json
+   │   │   └── vite.config.js
+   ├── server/
+   │   ├── django_server/
+   │   │   ├── api/
+   │   │   │   ├── migrations/
+   │   │   │   ├── utils/
+   │   │   │   │   ├── groq_client.py
+   │   │   │   ├── asgi.py
+   │   │   │   ├── admin.py
+   │   │   │   ├── apps.py
+   │   │   │   └── models.py
+   │   │   │   ├── tests.py
+   │   │   │   ├── urls.py
+   │   │   │   └── views.py
+   │   │   ├── django_server/
+   │   │   │   ├── __init__.py
+   │   │   │   ├── asgi.py
+   │   │   │   ├── settings.py
+   │   │   │   ├── urls.py
+   │   │   │   └── wsgi.py
+   │   ├── .gitignore
+   │   ├── .env.example
+   │   ├── manage.py
+   └── README.md 
+```
+
+Notes for Users
+---------------
+
+-   **Data Loss Warning:** Clicking the "Back" button clears the current playlist and resets the app. Ensure you save your playlist before proceeding.
+-   **Cross-Platform Compatibility:** The app is optimized for desktop and mobile devices.
 
 ## Installation
 
@@ -99,13 +146,6 @@ The Playlist Generator App is a web application that allows users to generate AI
     ```
 
 7.  Access the app at `http://localhost:5173`.
-
-Project Structure
------------------
-
--   **Frontend:** Contains React components and CSS files in the `src` directory.
--   **Backend:** Django REST Framework setup in the `backend` directory with REST APIs for genre-based playlist generation.
-   
 
 ## Postman Documentation
 
