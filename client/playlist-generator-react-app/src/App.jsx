@@ -19,7 +19,7 @@ const PlaylistApp = () => {
     setStatus('Pending');
     setPlaylist([]);
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/playlist',{
+      const response = await axios.get('https://playlist-generator-app.onrender.com/api/playlist',{
         params: {
           genre: genre
         },
