@@ -24,7 +24,7 @@ The Playlist Generator App is a web application that allows users to generate AI
 - **Front-end:** React.js, CSS
 - **Back-end:** Django REST Framework
 - **Text Generation API:** Groq
-- **Deployment:** Gitlab
+- **Deployment:** Gitlab, Vercel, Render
 
 Project Structure
 -----------------
@@ -165,17 +165,16 @@ The documentation includes:
 
 ### Hosted Usage
 
-1. The front-end of the application is hosted and accessible [playlist-generator-app link](https://playlist-generator-njjvpdik7-obi-sammys-projects.vercel.app/).  
-2. Unfortunately, the server is not yet hosted, meaning requests to generate playlists are not functional from the hosted site at this time.    
-Note: The web-based option is currently under development and will be available soon.
+1. The front-end of the application is hosted on Vercel and accessible [playlist-generator-app link](https://playlist-generator-njjvpdik7-obi-sammys-projects.vercel.app/).
+2. The back-end is also hosted on Render and is configured to only accept requests from the hosted front-end ip address.
 
 ## Areas of Improvement
 
 - [ ] Implement user authentication for personalized playlists.
 - [ ] Change the dropdown to a form where users can specify niche genres.
 - [ ] Add persistent storage for playlist saving and sharing.
-- [ ] Restrict access to the server by adding the address of the urls that should have access to the server in the corsheader function.
-- [ ] Host the server
+- [x] Restrict access to the server by adding the address of the urls that should have access to the server in the corsheader function.
+- [x] Host the server
 
 ## Support
 
