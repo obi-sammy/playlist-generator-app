@@ -165,7 +165,7 @@ The documentation includes:
 
 ### Hosted Usage
 
-1. The front-end of the application is hosted on Vercel and accessible [playlist-generator-app link](https://playlist-generator-njjvpdik7-obi-sammys-projects.vercel.app/).
+1. The front-end of the application is hosted on Vercel and accessible [playlist-generator-app link](https://playlist-generator-app.vercel.app/).
 2. The back-end is also hosted on Render and is configured to only accept requests from the hosted front-end ip address.
 
 ## Areas of Improvement
